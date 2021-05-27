@@ -1,0 +1,4 @@
+.logo {
+    @apply bg-no-repeat bg-cover;
+    @apply h-16 w-32;
+}
