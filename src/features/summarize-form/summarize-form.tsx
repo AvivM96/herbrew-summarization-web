@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Controller, RegisterOptions, useForm} from "react-hook-form";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
@@ -28,6 +28,7 @@ export type FormFields = {
     [FormField.MaxSentences]: number;
 }
 
+const FORM_DATA_KEY = "formData";
 
 const formRules: Map<FormField, RegisterOptions> = new Map<FormField, RegisterOptions>([
     [FormField.Title, {
@@ -42,7 +43,7 @@ const formRules: Map<FormField, RegisterOptions> = new Map<FormField, RegisterOp
 
 const SummarizeForm: React.FC = () => {
     const {
-        handleSubmit, register, control, formState: {errors},
+        handleSubmit, register, control, formState: {errors, isDirty}, watch, setValue, reset,
     } = useForm<FormFields>({
         defaultValues: {
             [FormField.Method]: SummarizeMethod.Extractive
@@ -52,7 +53,21 @@ const SummarizeForm: React.FC = () => {
     const {summarizationStore} = useStore();
     const [summarizing, setSummarizing] = useState<boolean>(false);
     const history = useHistory();
+    const formData = watch();
 
+    useEffect(() => {
+        if (isDirty) {
+            localStorage.setItem(FORM_DATA_KEY, JSON.stringify(formData));
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [formData.text, formData.method, formData.title, isDirty]);
+
+
+    useEffect(() => {
+        const formData = JSON.parse(localStorage.getItem(FORM_DATA_KEY) || "{}");
+        reset(formData);
+    }, [setValue, reset]);
 
     const onSubmit = async (values: FormFields) => {
         try {

@@ -17,7 +17,7 @@ const HistoryList: React.FC = () => {
     }
 
     return (
-        <div className="absolute right-0 mt-20 border-l border-gray-300 p-10 w-80 text-right">
+        <div className="absolute right-0 mt-20 border-l border-gray-300 p-10 w-80 text-right overscroll-y-contain">
             <span className="font-bold tracking-wide text-gray-700 text-sm">
                 היסטורית כתבות
             </span>
