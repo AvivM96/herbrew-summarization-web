@@ -35,7 +35,7 @@ const SummarizeMethods: React.FC<Props> = ({value, onChange}) => {
                 >
                     <>
                         <MarkerIcon className="mr-10"/>
-                        <span className="inline-block mr-2" >אקסרקטיב</span>
+                        <span className="inline-block mr-2" >אקסטרקטיב</span>
                     </>
                 </Radio>
 
