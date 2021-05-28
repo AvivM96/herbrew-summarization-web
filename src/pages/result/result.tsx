@@ -6,6 +6,7 @@ import {SummarizeMethod} from "../../features/summarize-form/summarize-form";
 import MarkerIcon from "../../icons/marker-icon";
 import BrainIcon from "../../icons/brain-icon";
 import {calculateReadingTimeEstimation} from "../../utils/utils";
+import HistoryList from "../../features/history-list/history-list";
 
 const Result: React.FC = () => {
     const history = useHistory();
@@ -39,6 +40,8 @@ const Result: React.FC = () => {
                     </span>
                 ))}
             </div>
+
+            <HistoryList />
         </div>
     )
 };

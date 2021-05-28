@@ -26,11 +26,11 @@ const HistoryList: React.FC = () => {
                     <div key={result.uuid} onClick={() => history.push(`/result/${result.uuid}`)} className="mb-4 cursor-pointer">
                         <span className="block font-semibold text-lg">{result.title}</span>
                         <span className="block text-gray-500">{new Date(result.date).toLocaleDateString("he-IL", { weekday: "long", year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                        <div className="flex">
+                        <div className="flex mt-2">
                             {Number(result.method) === SummarizeMethod.Extractive && <MarkerIcon />}
                             {Number(result.method) === SummarizeMethod.Abstractive && <BrainIcon />}
                             <span className="mx-2">&bull;</span>
-                            <span>{calculateReadingTimeEstimation(result.word_count)} דק׳ </span>
+                            <span className="bg-purple-200 text-purple-700 tracking-wide font-bold rounded-full px-2 text-xs flex items-center justify-center">{calculateReadingTimeEstimation(result.word_count)} דק׳ </span>
                         </div>
                     </div>
                 ))}
