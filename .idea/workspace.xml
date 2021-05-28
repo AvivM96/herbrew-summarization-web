@@ -5,35 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53ae2b79-96d8-4e46-919b-b63dd4acb0f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/app-footer/app-footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/radio-group/RadioGroup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/radio-group/radio-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/radio/Radio.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/summarize-methods/summarize-methods.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/textarea/text-area.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/summarize-form/summarize-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/use-store.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useIsDesktopMediaQuery.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useMediaQuery.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/result/result.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/http-service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/summarization-service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/root-store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stores/summarization-store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/brain-icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/marker-icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/text-paste/text-paste.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/welcome-message/particles-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/welcome-message/particles-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logo/logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logo/logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/summarize-methods/summarize-methods.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/summarize-methods/summarize-methods.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/welcome-message/welcome-message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/welcome-message/welcome-message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/summarize-form/summarize-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/summarize-form/summarize-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/result/result.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/result/result.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/summarization-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/summarization-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/summarization-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/summarization-store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +31,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -104,7 +90,7 @@
       <workItem from="1620318750526" duration="618000" />
       <workItem from="1620549305619" duration="108000" />
       <workItem from="1621081297310" duration="1850000" />
-      <workItem from="1622135327130" duration="10453000" />
+      <workItem from="1622135327130" duration="17433000" />
     </task>
     <servers />
   </component>

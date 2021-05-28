@@ -8,7 +8,10 @@ interface Props {
 
 const Logo: React.FC<Props> = ({className}) => {
     return (
-        <div className={classNames(className, "logo")} style={{backgroundImage: `url('${process.env.PUBLIC_URL}/logo.png')`}}/>
+        <div
+            onClick={() => window.location.href = "#/home"}
+            className={classNames(className, "logo cursor-pointer")} style={{backgroundImage: `url('${process.env.PUBLIC_URL}/logo.png')`}}
+        />
     )
 };
 

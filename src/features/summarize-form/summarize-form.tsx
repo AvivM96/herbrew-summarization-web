@@ -30,7 +30,10 @@ export type FormFields = {
 
 
 const formRules: Map<FormField, RegisterOptions> = new Map<FormField, RegisterOptions>([
-    [FormField.Title, {maxLength: {value: 100, message: "אורך הטקסט שהוכנס חורג מהמקסימום - 100"}}],
+    [FormField.Title, {
+        required: "חובה להזין טקסט.",
+        maxLength: {value: 100, message: "אורך הטקסט שהוכנס חורג מהמקסימום - 100"}
+    }],
     [FormField.Text, {
         required: "חובה להזין טקסט.",
         minLength: {value: 100, message: "טקסט לא מספיק ארוך מינימום 255 תווים."}
@@ -54,8 +57,8 @@ const SummarizeForm: React.FC = () => {
     const onSubmit = async (values: FormFields) => {
         try {
             setSummarizing(true);
-            await summarizationStore.summarize(values);
-            history.push("/result/123test");
+            const summarization = await summarizationStore.summarize(values);
+            history.push(`/result/${summarization.uuid}`);
         } catch (e) {
             console.error("failed to summarize", e);
         } finally {
@@ -64,7 +67,8 @@ const SummarizeForm: React.FC = () => {
     };
 
     return (
-        <form className="flex flex-col mt-8 sm:bg-white sm:rounded-lg sm:p-4" onSubmit={handleSubmit(onSubmit)}>
+        <form className="flex flex-col mt-8 sm:bg-white sm:rounded-lg sm:p-4 sm:shadow-lg"
+              onSubmit={handleSubmit(onSubmit)}>
             <div className="flex">
                 <Controller
                     name={FormField.Method}
@@ -76,11 +80,12 @@ const SummarizeForm: React.FC = () => {
 
             <Input
                 className="mt-4"
-                text="כותרת (אופציונאלי)"
+                text="כותרת"
                 placeholder="כותרת לסיכום"
                 error={errors[FormField.Title]?.message}
                 {...register(FormField.Title, formRules.get(FormField.Title))}
             />
+
             <TextArea
                 text="טקסט"
                 placeholder="הדבק כאן את הטקט אשר תרצה לסכם"
@@ -88,10 +93,11 @@ const SummarizeForm: React.FC = () => {
                 error={errors[FormField.Text]?.message}
                 {...register(FormField.Text, formRules.get(FormField.Text))}
             />
+
             <div className="px-3">
                 <Button className="mt-16 self-center w-full h-10">
-                    { !summarizing && <span>סכם !</span> }
-                    { summarizing && <Spinner size={20} />}
+                    {!summarizing && <span>סכם !</span>}
+                    {summarizing && <Spinner size={20}/>}
                 </Button>
             </div>
         </form>

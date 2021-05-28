@@ -12,6 +12,9 @@ export type SummarizationResponse = {
     method: SummarizeMethod,
     summary: string;
     text: string;
+    uuid: string;
+    date: string;
+    word_count: number;
 }
 
 class SummarizationService {

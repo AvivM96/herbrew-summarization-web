@@ -11,10 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   direction: rtl;
-
-  @screen sm {
-    background-color: #f6f6f6;
-  }
 }
 
 code {

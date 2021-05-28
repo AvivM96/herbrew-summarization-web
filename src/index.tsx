@@ -7,8 +7,9 @@ import RootStore from "./stores/root-store";
 import { StoreProvider } from './hooks/use-store';
 import 'mobx-react-lite/batchingForReactDom';
 
-(function init() {
+(async function init() {
     const rootStore = new RootStore();
+    rootStore.summarizationStore.loadHistory();
 
     ReactDOM.render(
         <React.StrictMode>

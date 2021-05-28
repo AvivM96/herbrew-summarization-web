@@ -3,6 +3,8 @@ import {SummarizeMethod} from "../../features/summarize-form/summarize-form";
 import Radio from "../radio/Radio";
 import RadioGroup from "../radio-group/RadioGroup";
 import useIsDesktopMediaQuery from "../../hooks/useIsDesktopMediaQuery";
+import MarkerIcon from "../../icons/marker-icon";
+import BrainIcon from "../../icons/brain-icon";
 
 interface Props {
     value: SummarizeMethod;
@@ -31,7 +33,10 @@ const SummarizeMethods: React.FC<Props> = ({value, onChange}) => {
                     className="mt-6"
                     value={SummarizeMethod.Extractive}
                 >
-                    <span className="inline-block mr-10">אקסרקטיב</span>
+                    <>
+                        <MarkerIcon className="mr-10"/>
+                        <span className="inline-block mr-2" >אקסרקטיב</span>
+                    </>
                 </Radio>
 
                 <Radio
@@ -39,7 +44,8 @@ const SummarizeMethods: React.FC<Props> = ({value, onChange}) => {
                     className="mt-6"
                     value={SummarizeMethod.Abstractive}
                 >
-                    <span className="inline-block mr-10">אבסטרקטיב</span>
+                    <BrainIcon className="mr-10" />
+                    <span className="inline-block mr-2">אבסטרקטיב</span>
                 </Radio>
             </RadioGroup>
         </div>
