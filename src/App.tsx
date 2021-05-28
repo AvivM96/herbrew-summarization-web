@@ -1,25 +1,29 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
 import HomePage from "./pages/home/home";
-import Logo from "./components/logo/logo";
-import Particles from "react-particles-js";
-import {particlesConfig2} from "./components/welcome-message/particles-config2";
+import AppFooter from "./components/app-footer/app-footer";
+import {observer} from "mobx-react-lite";
+import Result from "./pages/result/result";
 
-function App() {
+const App: React.FC = () => {
     return (
-        <div className="App relative flex justify-center h-screen">
+        <div className="App relative flex justify-center h-screen mb-24">
             <HashRouter basename="/">
                 <Switch>
                     <Route path="/home">
                         <HomePage />
                     </Route>
+
+                    <Route path="/result/:uuid">
+                        <Result />
+                    </Route>
                     <Redirect to={{pathname: "/home"}} />
                 </Switch>
             </HashRouter>
-            <Logo className="absolute bottom-0 right-4" />
+            <AppFooter />
         </div>
     );
 }
 
-export default App;
+export default observer(App);

@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import RootStore from "./stores/root-store";
+import { StoreProvider } from './hooks/use-store';
+import 'mobx-react-lite/batchingForReactDom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+(function init() {
+    const rootStore = new RootStore();
+
+    ReactDOM.render(
+        <React.StrictMode>
+            <StoreProvider value={rootStore}>
+                <App />
+            </StoreProvider>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+})();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

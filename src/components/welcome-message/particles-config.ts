@@ -2,8 +2,9 @@ import {IParticlesParams} from "react-particles-js";
 
 export const particlesConfig: IParticlesParams = {
     particles: {
+
         number: {
-            value: 20,
+            value: 50,
             density: {
                 enable: false
             }

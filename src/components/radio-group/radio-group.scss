@@ -1,0 +1,32 @@
+@import "~@blueprintjs/core/src/components/forms/controls";
+@import "~@blueprintjs/core/lib/scss/variables";
+
+.radio-group-brand {
+  .#{$ns}-control .#{$ns}-control-indicator {
+    @apply bg-gray-200;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .#{$ns}-control.#{$ns}-large .#{$ns}-control-indicator {
+    @apply text-3xl;
+  }
+
+  .#{$ns}-control input:checked {
+    @apply text-gray-700;
+  }
+
+  .#{$ns}-control,
+  input:not(:disabled):active:checked,
+  ~ .#{$ns}-control-indicator {
+    //@apply bg-yellow-500;
+  }
+
+  .#{$ns}-control input:checked ~ .#{$ns}-control-indicator {
+    @apply bg-yellow-500;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .#{$ns}-control:hover input:checked ~ .#{$ns}-control-indicator {
+    @apply bg-yellow-500;
+  }
+}
