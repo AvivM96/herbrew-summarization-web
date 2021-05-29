@@ -33,7 +33,7 @@ const Result: React.FC = () => {
                 <span>{calculateReadingTimeEstimation(summarization.word_count)} דק׳ </span>
             </div>
             <span className="block text-lg mt-6 text-gray-600">{summarization?.summary}</span>
-            <div className="mt-6 border-t border-gray-400 pt-4">
+            <div className="mt-6 border-t border-gray-400 pt-4 pb-20">
                 {paragraphs?.map((paragraph, index) => (
                     <span key={index} className="block text-lg mb-4">
                         {paragraph}
