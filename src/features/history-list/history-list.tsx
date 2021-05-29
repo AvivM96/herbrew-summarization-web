@@ -17,11 +17,11 @@ const HistoryList: React.FC = () => {
     }
 
     return (
-        <div className="absolute right-0 mt-20 border-l border-gray-300 p-10 w-80 text-right overscroll-y-contain">
+        <div className="absolute right-0 border-l border-gray-300 px-10 w-80 text-right overscroll-y-contain">
             <span className="font-bold tracking-wide text-gray-700 text-sm">
                 היסטורית כתבות
             </span>
-            <div className="flex flex-col mt-4">
+            <div className="flex flex-col mt-4 pb-20">
                 {summarizationStore.history.map(result => (
                     <div key={result.uuid} onClick={() => history.push(`/result/${result.uuid}`)} className="mb-4 cursor-pointer">
                         <span className="block font-semibold text-lg">{result.title}</span>
