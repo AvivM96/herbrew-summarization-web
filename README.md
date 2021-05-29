@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Hebrew Text Summarization App
+
+<img width="1785" alt="Screen Shot 2021-05-29 at 19 19 31" src="https://user-images.githubusercontent.com/47943778/120077394-eabe8c00-c0b2-11eb-9988-f2796b129545.png">
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
